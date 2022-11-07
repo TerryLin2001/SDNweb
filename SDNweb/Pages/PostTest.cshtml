@@ -1,0 +1,45 @@
+﻿@page
+@model SDNweb.Pages.PostTestModel
+@{
+	ViewData["Title"] = "ONOS Post Test Page";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>This page is under construction as of @ViewData["Timestamp"]</p>
+<br>
+
+<form method="POST">
+    <label>Please enter any words or numbers:</label>
+    <input class="form-control" id="textbox" name="textbox" type="text" />
+    <br>
+    <textarea id="w3review" name="textarea" rows="4" cols="50"></textarea>
+    
+    <br>
+
+
+    <button type="submit" asp-page-handler="PostTest" class="btn btn-primary">
+        Submit
+    </button>
+
+    
+
+
+</form>
+<body>
+    
+</body>
+
+<br />
+
+<p>
+    <h2>PostTest test</h2>
+    <p>textbox</p>
+    @ViewData["textbox"]
+    <br>
+    <p>textarea</p>
+    @ViewData["textarea"]
+
+
+</p>
+
+
